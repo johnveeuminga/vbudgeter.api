@@ -46,6 +46,8 @@ class UserController extends Controller
         if($user->usertype_id == 1){
             $store = new Store;
 
+            $store->store_name = "";
+            
             $store->user_id = $user->id;
 
             $store->save();
