@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Store;
+use App\Vegetables;
 use Illuminate\Http\Request;
 
-class StoreController extends Controller
+class VegetableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class StoreController extends Controller
     public function index()
     {
         //
-
-        return response()->json(['data' => Store::with('vegetables')->get()]);
     }
 
     /**
@@ -38,7 +36,14 @@ class StoreController extends Controller
     public function store(Request $request)
     {
         //
-        
+        $vegetable = Vegetables::create($request->all());
+
+        $store = $vegetable->store;
+
+        $store = $store->vegetables;
+
+         return response()->json(['data' => $vegetable, 'store' => $store,'message'  => 'Vegetable successfully created.']);
+
     }
 
     /**
@@ -73,15 +78,13 @@ class StoreController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $store = Store::find($id);
 
-        $store->store_name = $request->store_name;
+        $vegetable = Vegetables::find($id);
 
-        $store->save();
+        $vegetable->update($request->all());
 
-        $store->vegetables;
+         return response()->json(['data' => $vegetable, 'message'  => 'Vegetable successfully updated.']);
 
-        return response()->json(['store' => $store]);
     }
 
     /**
@@ -93,38 +96,10 @@ class StoreController extends Controller
     public function destroy($id)
     {
         //
+        $vegetable = Vegetables::find($id);
 
-        $store = Store::find($id);
-
-        $store->delete();
+        $vegetable->delete();
 
         return response()->json(['message' => "Vegetable deleted successfuly."]);
-    }
-
-    public function getOrdersByStore($id){
-        $users = [];
-        $orders = Store::find($id)->orders;
-        foreach($orders as $order){
-            $order->items;
-            foreach($order->items as $item){
-                $item->vegetable;
-            }
-            $users[] = $order->user;
-        }
-        return ['orders'=> $orders];
-    }
-
-    public function setLocation($id, Request $request){
-        $store = Store::find($id);
-
-        $store->latitude = $request->latitude;
-
-        $store->longitude = $request->longitude;
-
-        $store->save();
-
-        $store->vegetables;
-
-        return response()->json(['store' => $store]);
     }
 }

@@ -46,7 +46,7 @@ class UserController extends Controller
         if($user->usertype_id == 1){
             $store = new Store;
 
-            $store->store_name = "";
+            $store->store_name = $user->name."'s Store";
             
             $store->user_id = $user->id;
 
@@ -123,5 +123,11 @@ class UserController extends Controller
         $user->delete();
 
         return response()->json(['message' => 'User successfully deleted']);
+    }
+
+    public function getStore($id){
+        $store = User::find($id)->store;
+        $store->vegetables;
+        return $store;
     }
 }

@@ -20,6 +20,7 @@ class CreateVegetablesTable extends Migration
             $table->double('price2');
             $table->double('price3');
             $table->integer('store_id')->unsigned();
+            $table->double('avail_stock');
             $table->timestamps();
         });
     }

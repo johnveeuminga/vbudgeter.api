@@ -56,8 +56,22 @@ class OrderController extends Controller
                 $orderItem->vegetables_id = $item['id'];
                 $orderItem->price = $request->itemsPrice[$key];
                 $orderItem->price_index = $request->priceIndex[$key];
+                $orderItem->qty = $request->qty[$key];
 
                 $orderItem->save();
+
+                $vegetable = $orderItem->vegetable;
+
+                if($orderItem->price_inxex == 1){
+                    $vegetable->avail_stock -= .25;
+                }else if($orderItem->price_index == 2){
+                    $vegetable->avail_stock -= .50;
+                }else{
+                    $vegetable->avail_stock -= 1;
+                }
+
+                $vegetable->save();
+
             }
 
         }

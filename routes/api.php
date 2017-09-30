@@ -14,11 +14,22 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+	$store;
+	$user = $request->user();
+	if($user->usertype_id == 1){
+		$store = $user->store;
+		$store->vegetables;
+	}else{
+		$store = null;
+	}
+    return response()->json(['user'=>$user, 'store'=>$store]);
 });
 
 Route::resource('/users', 'UserController');
 Route::resource('/stores', 'StoreController');
 Route::resource('/orders', 'OrderController');
+Route::resource('/vegetables', 'VegetableController');
 
 Route::get('/stores/{id}/orders', 'StoreController@getOrdersByStore');
+Route::put('/stores/{id}/setLocation', 'StoreController@setLocation');
+Route::get('/users/{user}/getStore', 'UserController@getStore');

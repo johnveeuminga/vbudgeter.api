@@ -19,6 +19,7 @@ class CreateOrderItemsTable extends Migration
             $table->integer('vegetables_id');
             $table->integer('price_index');
             $table->double('price');
+            $table->integer('qty');
             $table->timestamps();
         });
     }

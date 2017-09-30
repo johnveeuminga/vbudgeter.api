@@ -16,17 +16,23 @@ class StoreTableSeeder extends Seeder
 
     	$table->insert([
     		'store_name' => 'Store 1',
-            'user_id' => 2
+            'user_id' => 2,
+            'latitude' => 16.414543238567195,
+            'longitude' => 120.59428324702753
     	]);
 
     	$table->insert([
     		'store_name' => 'Store 2',
-            'user_id' => 3
+            'user_id' => 3,
+            'latitude' => 16.415098981642657,
+            'longitude' => 120.59456219676508
     	]);
 
     	$table->insert([
     		'store_name' => 'Store 3',
-            'user_id' => 4
+            'user_id' => 4,
+            'latitude' => 16.415304812008348,
+            'longitude' => 120.59544196132197
     	]);
 
     	$table->insert([

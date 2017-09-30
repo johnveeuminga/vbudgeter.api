@@ -17,6 +17,8 @@ class CreateStoresTable extends Migration
             $table->increments('id');
             $table->string('store_name');
             $table->integer('user_id');
+            $table->double('latitude')->nullable();
+            $table->double('longitude')->nullable();
             $table->timestamps();
         });
     }

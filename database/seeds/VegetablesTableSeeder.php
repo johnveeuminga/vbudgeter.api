@@ -19,7 +19,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 1
+        	"store_id" => 1,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -27,7 +28,9 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 1
+        	"store_id" => 1,
+            'avail_stock' => 3.5
+
         ]);
 
         $table->insert([
@@ -35,7 +38,9 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 1
+        	"store_id" => 1,
+            'avail_stock' => 3.5
+
         ]);
 
         $table->insert([
@@ -43,7 +48,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 54, 
         	"price2"=>67, 
         	"price3"=> 89,
-        	"store_id" => 2
+            'avail_stock' => 3.5,
+        	"store_id" => 2,
         ]);
 
         $table->insert([
@@ -51,7 +57,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 15, 
         	"price2"=>25, 
         	"price3"=> 45,
-        	"store_id" => 2
+        	"store_id" => 2,
+            'avail_stock' => 3.5
         ]);
 
 
@@ -60,7 +67,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 2
+        	"store_id" => 2,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -68,7 +76,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 3
+        	"store_id" => 3,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -76,7 +85,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 3
+        	"store_id" => 3,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -84,7 +94,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 3
+        	"store_id" => 3,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -92,7 +103,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 60, 
         	"price2"=>70, 
         	"price3"=> 89,
-        	"store_id" => 4
+        	"store_id" => 4,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -100,7 +112,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 4
+        	"store_id" => 4,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -108,7 +121,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 12, 
         	"price2"=>24, 
         	"price3"=> 45,
-        	"store_id" => 4
+        	"store_id" => 4,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -116,7 +130,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 10, 
         	"price2"=>20, 
         	"price3"=> 40,
-        	"store_id" => 5
+        	"store_id" => 5,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -124,7 +139,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 60, 
         	"price2"=>70, 
         	"price3"=> 89,
-        	"store_id" => 5
+        	"store_id" => 5,
+            'avail_stock' => 3.5
         ]);
 
         $table->insert([
@@ -132,7 +148,8 @@ class VegetablesTableSeeder extends Seeder
         	"price1"=> 5, 
         	"price2"=>15, 
         	"price3"=> 30,
-        	"store_id" => 5
+        	"store_id" => 5,
+            'avail_stock' => 3.5
         ]);
 
 
