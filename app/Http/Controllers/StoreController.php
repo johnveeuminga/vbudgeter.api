@@ -76,6 +76,7 @@ class StoreController extends Controller
         $store = Store::find($id);
 
         $store->store_name = $request->store_name;
+        $store->store_desc = $request->store_desc;
 
         $store->save();
 
